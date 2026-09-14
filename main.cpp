@@ -1,10 +1,14 @@
 #include <iostream>
+#include <string>
+#include <algorithm>
 
 int main() {
-    // Print the greeting below
-    int a, b;
-    std::cin >> a >> b;
-    std::cout << a * b << std::endl;
+    std::string s;
+    std::getline(std::cin, s);   // reads the WHOLE line, spaces included
 
+    std::reverse(s.begin(), s.end());
+
+    std::cout << s << '\n';      // prints s exactly as it stands right now;
+                                 // reverse s above and this prints the answer
     return 0;
 }
