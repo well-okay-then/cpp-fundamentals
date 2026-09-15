@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
 
 int main() {
-    std::string s;
-    std::getline(std::cin, s);   // reads the WHOLE line, spaces included
+    std::string name;
+    int age;
+    std::getline(std::cin, name);
+    std::cin >> age;
 
-    std::reverse(s.begin(), s.end());
+    std::cout << "Hi, " << name << "! You are " << age << " years old.\n";
 
-    std::cout << s << '\n';      // prints s exactly as it stands right now;
-                                 // reverse s above and this prints the answer
+    // Print the greeting.
     return 0;
 }
