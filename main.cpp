@@ -1,14 +1,19 @@
 #include <iostream>
-#include <string>
+
 
 int main() {
-    std::string name;
-    int age;
-    std::getline(std::cin, name);
-    std::cin >> age;
+    int n;
+    std::cin >> n;
 
-    std::cout << "Hi, " << name << "! You are " << age << " years old.\n";
+    if (n%15 == 0) {
+        std::cout << "FizzBuzz";
+    } else if (n%5 == 0) {
+        std::cout << "Buzz";
+    }else if (n%3 == 0) {
+        std::cout << "Fizz";
+    } else {
+        std::cout << n;
+    }
 
-    // Print the greeting.
     return 0;
 }
