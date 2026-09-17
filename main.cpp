@@ -1,19 +1,13 @@
 #include <iostream>
 
-
 int main() {
     int n;
     std::cin >> n;
 
-    if (n%15 == 0) {
-        std::cout << "FizzBuzz";
-    } else if (n%5 == 0) {
-        std::cout << "Buzz";
-    }else if (n%3 == 0) {
-        std::cout << "Fizz";
-    } else {
-        std::cout << n;
+    long long total = 0;
+    for (int i = 1; i <= n; i++) {
+        total += i;
     }
-
+    std::cout << total << "\n";
     return 0;
 }
