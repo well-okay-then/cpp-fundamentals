@@ -1,13 +1,21 @@
 #include <iostream>
+#include <string>
+#include <sstream>
+#include <map>
 
 int main() {
-    int n;
-    std::cin >> n;
+    std::string line;
+    std::getline(std::cin, line);
+    std::map<std::string, int> seen;
+    std::istringstream iss(line);
+    std::string word;
+    while (iss >> word) seen[word]++;
 
-    long long total = 0;
-    for (int i = 1; i <= n; i++) {
-        total += i;
-    }
-    std::cout << total << "\n";
+    std::cout << seen.size()<< "\n";
+
+    //for(const auto& entry : seen){
+    //    std::cout << entry.first << " " << entry.second << "\n";
+    //}
+    // Print seen.size().
     return 0;
 }
